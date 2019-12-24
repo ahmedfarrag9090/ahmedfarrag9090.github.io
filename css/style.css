@@ -1,0 +1,687 @@
+
+*{box-sizing: border-box}
+
+a,
+a:focus,
+a:active,
+a:hover,
+a:visited{text-decoration: none;outline: none}
+
+ul{list-style: none;padding: 0; margin: 0;}
+
+
+html{
+    max-width: 100%;
+}
+
+
+body{
+    font-family: "open sans", arial;
+    line-height: 1.6;
+    background-color: #2c3e50;
+    max-width: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden
+}
+
+.wraper{
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+main{
+    position: relative;
+}
+
+.menu-btn{
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 44px;
+    height: 38px;
+    padding: 8px;
+    background-color: rgba(0,0,0,.1);
+    border: 1px solid #2c3e50;
+    border-radius: 5px;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    cursor: pointer;
+    z-index: 9999;
+}
+
+.menu-btn span{
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+}
+
+@media(min-width: 992px){
+    .menu-btn{display: none}
+}
+
+.show{transform: translateX(230px)}
+
+@media(min-width: 992px){
+    .show{transform: unset}
+}
+
+aside{
+    position: fixed;
+    top: 70px;
+    left: -210px;
+    background-color: #2c3e50;
+    box-shadow: 0 0 25px 1px #1b2838;
+    display: flex;
+    flex-flow: column;
+    width: 200px;
+    height: fit-content;
+    transition: all .5s ease-in-out
+}
+
+@media (min-width: 992px){
+    aside{
+        left: 0;
+        top: 20px
+    }
+}
+
+aside .my-img{padding: 10px }
+
+aside .my-img > div{
+    padding: 5px;
+    border: 5px solid rgba(120,129,149,.2);
+    border-radius: 4px;
+    overflow: hidden;
+    height: 220px;
+}
+aside img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover
+}
+
+aside ul li a{
+    display: block;
+    padding: 6px 12px;
+    text-decoration: none;
+    color: #869cb1;
+    border-top: 1px solid #3a4a5d;
+    border-bottom: 1px solid #22303e;
+    transition: all .3s ease-in-out;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: .7px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+aside ul li:hover a{color: #fff}
+
+aside ul li.active a{
+    color: #fff;
+    border-color: transparent
+}
+aside ul li.active a i{background-color: steelblue}
+
+aside li a i{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px !important;
+    border-radius: 50%;
+    text-align: center;
+    margin-right: 12px;
+    transition: all .5s ease-in-out;
+    box-shadow: inset 0 0 5px 0 #1b2838
+}
+
+
+
+
+
+
+
+
+
+.content{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    position: relative;
+    top: 10px;
+    transition: all .5s ease-in-out;
+}
+
+@media(min-width: 992px){
+    .content{
+        width: calc(100% - 200px);
+        left: unset;
+        transform: translateX(200px)
+    }
+}
+
+.content > div{
+    color: aliceblue;
+    border: 5px solid #3a4a5d;
+    border-radius: 4px;
+    transition: all .5s ease-in-out;
+    box-shadow: 0 0 25px 1px #1b2838;
+    background: url(../images/profile-photo.jpg) 40% center;
+    background-size: cover;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.content > div .overlay{
+    padding: 20px 15px;
+    min-width: 100%;
+    min-height: 100%;
+    background-color: rgba(44, 62, 80, .9)
+}
+
+
+
+
+
+
+
+
+
+
+.intro{padding: 40px 0 20px;}
+
+.intro h1{
+    font-weight: 900;
+    line-height: 40px;
+    margin: 0 0 4px;
+    font-size: 2rem;
+    text-transform: uppercase;
+    text-align: center
+}
+
+.intro h3{
+    text-transform: uppercase;
+    margin: 0;
+    text-align: center;
+    font-size: .8rem
+}
+
+.intro .intro-links{
+    text-align: center
+}
+
+.intro .intro-links > div{
+    display: inline-block;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.intro .intro-links > div:last-of-type a{
+    padding: 5px 10px;
+    background-color: steelblue;
+}
+
+.intro .intro-links > div:last-of-type a:hover{
+    background-color: #2c3e50;
+    box-shadow: 0 0 10px #aaa
+}
+
+.intro .intro-links > div a{
+    display: block;
+    padding: 5px;
+    color: aliceblue;
+    border-radius: 10px;
+    transition: all .3s ease-in-out;
+    position: relative;
+}
+
+.intro .intro-links > div::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: steelblue;
+    border-radius: 10px;
+    transition: all .3s ease-in-out;
+    transform: scale(0,0)
+}
+
+.intro .intro-links > div:hover::before{
+    transform: scale(1,1)
+}
+
+@media(min-width: 768px){
+    .profile .about{
+        width: 50%;
+        display: inline-block;
+        vertical-align: top;
+        line-height: 2;
+        margin-right: 40px
+    }
+}
+
+@media(min-width: 425px){
+    .profile .personal{
+        width: 50%;
+        display: inline-block;
+        border-radius: 5px;
+        padding: 0 10px;
+        margin-left: auto;
+        background-color: rgba(193, 212, 230, .2)
+    }
+}
+
+.profile .about p{
+    margin: 20px 0;
+    color: #c1d4e6;
+}
+
+.profile .about strong{color: aliceblue;text-transform: uppercase}
+
+.profile .personal{
+    width: 260px;
+}
+
+.profile ul{margin: 20px 0 0}
+
+.profile li{
+    display: flex;
+    max-width: 100%;
+    font-size: .8rem;
+    text-transform: capitalize;
+    margin-bottom: 15px
+}
+
+.profile li span:first-of-type{
+    display:inline-block;
+    width: 40%;
+    font-weight: 700;
+}
+
+.profile li a{
+    font-size: .9rem;
+    font-weight: bold;
+    color: #fff;
+    text-transform: lowercase
+}
+
+
+
+
+
+
+
+
+
+
+
+.portfolio .gate{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between
+}
+
+.gate > div{
+    width: 50%;
+    height: 15px;
+    background-color: #337ab7;
+    border-radius: 10px;
+    transform: rotateZ(0);
+    transition: all .5s ease-in-out;
+    position: relative;
+    z-index: 9;
+}
+
+.g-left{transform-origin: left}
+
+.g-right{transform-origin: right}
+
+.gate span{
+    position: absolute;
+    font-size: 35px;
+    color: aliceblue;
+    transition: all .5s ease-in-out;
+    z-index: 10;
+}
+
+.gate span:first-of-type{
+    top: -10px;
+    left: -15px;
+}
+
+.gate span:last-of-type{
+    top: -10px;
+    right: -15px;
+}
+
+.portfolio h2{
+    text-transform: uppercase;
+    margin:40px auto;
+    text-align: center;
+    width: 150px;
+    border-bottom: 1px solid steelblue
+}
+
+.portfolio .gallery{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap
+}
+
+.portfolio .gallery > div{
+    width: 80%;
+    height: 200px;
+    margin-bottom: 20px;
+    position: relative;
+    border-radius: 10% 10% 40% 40% / 20% 20% 40% 40%;
+    overflow: hidden;
+}
+
+@media(min-width: 768px){
+    .portfolio .gallery > div{
+        width: 30%
+    }
+}
+
+.front{
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    background-color: aliceblue;
+    color:rgba(0,0,0,0.7);
+    font-weight: bold;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    transition: all .5s ease-in-out;
+    z-index: 2;
+    user-select: none;
+    transform-origin: top left;
+    border-radius: 10% 10% 40% 40% / 20% 20% 40% 40%;
+    overflow: hidden;
+}
+
+.front > span:first-of-type{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    font-weight: 900;
+    margin-bottom: 10px
+}
+
+.project1 .front{color: #008080}
+
+.project1 .front > span:first-of-type{font-size: 28px}
+
+
+.project2 .front{background-color: #1abc9c}
+
+.project3 .front span{
+    color: #337ab7;
+    letter-spacing: normal;
+}
+
+.project4 .front{background-color: rgb(253, 202, 50);}
+
+.project4 .front > span{color: #000}
+
+
+.project5 .front > span:first-of-type{font-size: 12px;color: #aaa}
+
+.project5 .front > span:not(:first-of-type){
+    font-size: 14px;
+    color:rgba(0,0,0,.9);
+}
+
+.project5 .front > span > span{
+    font-size: 50px;
+    color: #c90000;
+    border-top: 1px solid #c90000;
+    border-bottom: 1px solid #c90000;
+    border-left: 8px solid #c90000;
+}
+
+.show-back{
+    transform: rotateZ(90deg);
+    opacity: 0;
+}
+
+.back{
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    z-index: 1;
+}
+
+.back img{
+    object-fit: cover;
+    object-position: -50px -50px;
+    transition: all 3s ease-in-out;
+}
+
+.project4 .back img{
+    object-position: center -1800px;
+}
+
+.project5 .back img{
+    object-position: -400px -600px;
+}
+
+.scale-img{
+    transform: translateY(-250px)
+}
+
+.overlay-details{
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    background-color: rgba(44, 63, 87, 0.5);
+    border-radius: 10% 10% 40% 40% / 20% 20% 40% 40%;
+}
+
+.overlay-details > span{
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: steelblue;
+    background-color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all .3s ease-in-out
+}
+
+.overlay-details > span:hover{
+    background-color: steelblue
+}
+
+.overlay-details > span:hover a{color: aliceblue}
+
+.overlay-details > span a{color: steelblue;transition: all .3s ease-in-out}
+
+
+.portfolio .popup{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999999;
+    background-color: rgba(134, 156, 177, .2);
+    display: none
+}
+
+
+
+
+
+
+
+.resume .wraper{
+    background-color: aliceblue;
+    padding: 20px;
+    overflow-y: auto;
+    color: steelblue;
+    position: relative;
+}
+
+.resume .wraper > h2{
+    text-transform: uppercase;
+    margin: 40px auto;
+    text-align: center;
+    width: 105px;
+    border-bottom: 1px solid steelblue
+}
+
+.skills{
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.skills > h2{
+    text-transform: uppercase;
+    margin: 0;
+    margin-bottom: 50px;
+    border-bottom: 1px solid steelblue
+}
+
+.skills .skills-logo{
+    position: absolute;
+    right: 10%;
+    top: 40%;
+    font-size: 40px;
+    opacity: .2;
+}
+
+.skills > div:not(.skills-logo){
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 40px;
+    color: steelblue;
+    padding-left: 20px;
+    border-left: 1px solid steelblue;
+}
+
+.skills-group:nth-of-type(2) .skill:last-of-type{text-transform: capitalize}
+
+.skills .skills-group p{text-transform: none}
+
+.education{margin-bottom: 40px}
+
+.education h2{
+    text-transform: uppercase;
+    margin: 0;
+    margin-bottom: 50px;
+    border-bottom: 1px solid steelblue
+}
+
+.education .edu-item{
+    border-left: 1px solid steelblue;
+    padding-left: 20px
+}
+
+.edu-details .edu-item > h3{margin-bottom: 0}
+
+.edu-details .edu-item > span{
+    display: block;
+}
+
+.experience h2{
+    text-transform: uppercase;
+    margin: 0;
+    margin-bottom: 50px;
+    border-bottom: 1px solid steelblue;
+}
+
+.exp-details{margin-bottom: 50px}
+
+.experience .exp-item{
+    border-left: 1px solid steelblue;
+    padding-left: 20px;
+}
+
+.exp-details > div > h3{margin-bottom: 0}
+
+.exp-details > div >span{
+    display: block;
+}
+
+.resume .wraper .my-cv{
+    position: absolute;
+    left: 0;
+    max-width: 80%;
+}
+
+.resume .wraper .my-cv a{
+    display: block;
+    background-color: #2c3e50;
+    color: aliceblue;
+    padding: 8px 10px;
+    margin-bottom: 50px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    font-size: .9rem;
+    font-weight: bold;
+    box-shadow: 5px 10px 15px rgba(27, 40, 56, .2);
+    transition: all .5s ease-in-out
+}
+
+.resume .wraper .my-cv a:hover{
+    background-color: steelblue;
+}
+
+.contact h2{
+    text-transform: uppercase;
+    margin: 40px auto;
+    text-align: center;
+    width: 170px;
+    border-bottom: 1px solid steelblue
+}
+
+.contact .contact-links{
+    display: flex;
+    flex-flow: column;
+    margin-bottom: 40px
+}
+
+@media(min-width: 768px){
+    .contact .contact-links{
+        flex-flow: row;
+    }
+    .contact .contact-links > div{width: 50%}
+}
+
+.contact .contact-links > div{
+    text-align: center;
+    margin-bottom: 20px;
+    color: aliceblue;
+    font-size: 1.5rem;
+    transition: all .5s ease-in-out;
+    padding: 10px 5px
+}
+
+.contact .contact-links > div:hover{background-color: steelblue}
+
+
+.map{
+    margin: 0 -15px -25px
+}
