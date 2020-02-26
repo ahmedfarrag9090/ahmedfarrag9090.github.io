@@ -395,8 +395,10 @@ aside li a i{
     position: absolute;
     top: 0;
     left: 0;
-    min-width: 100%;
-    min-height: 100%;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
     background-color: aliceblue;
     color:rgba(0,0,0,0.7);
     font-weight: bold;
@@ -410,19 +412,18 @@ aside li a i{
     transform-origin: top left;
     border-radius: 10% 10% 40% 40% / 20% 20% 40% 40%;
     overflow: hidden;
+    font-size: .8rem;
 }
 
 .front > span:first-of-type{
     text-align: center;
     text-transform: uppercase;
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 900;
     margin-bottom: 10px
 }
 
 .project1 .front{color: #008080}
-
-.project1 .front > span:first-of-type{font-size: 28px}
 
 
 .project2 .front{background-color: #1abc9c}
@@ -440,7 +441,6 @@ aside li a i{
 .project5 .front > span:first-of-type{font-size: 12px;color: #aaa}
 
 .project5 .front > span:not(:first-of-type){
-    font-size: 14px;
     color:rgba(0,0,0,.9);
 }
 
@@ -452,6 +452,11 @@ aside li a i{
     border-left: 8px solid #c90000;
 }
 
+.project6 .front{
+    color: #61dafb;
+    background-color: #282c34;
+}
+
 .show-back{
     transform: rotateZ(90deg);
     opacity: 0;
@@ -461,7 +466,7 @@ aside li a i{
     overflow: hidden;
     width: 100%;
     height: 100%;
-    border-radius: 5px;
+    border-radius: 10% 10% 40% 40% / 20% 20% 40% 40%;
     z-index: 1;
 }
 
@@ -479,7 +484,9 @@ aside li a i{
     object-position: -400px -600px;
 }
 
-.scale-img{
+.project6 .back img{object-position: -300px 0;}
+
+.translate-img{
     transform: translateY(-250px)
 }
 

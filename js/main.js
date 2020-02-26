@@ -91,7 +91,7 @@ $(function(){
 
     $('.gallery > div').hover(function(){
         $(this).find('.front').toggleClass('show-back')
-        .end().find('.back img').toggleClass('scale-img');
+        .end().find('.back img').toggleClass('translate-img');
     });
 
 
