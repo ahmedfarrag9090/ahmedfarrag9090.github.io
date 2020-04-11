@@ -2,18 +2,13 @@
 *{box-sizing: border-box}
 
 a,
-a:focus,
 a:active,
 a:hover,
 a:visited{text-decoration: none;outline: none}
 
 ul{list-style: none;padding: 0; margin: 0;}
 
-
-html{
-    max-width: 100%;
-}
-
+html{width: 100%;}
 
 body{
     font-family: "open sans", arial;
@@ -58,7 +53,7 @@ main{
 }
 
 @media(min-width: 992px){
-    .menu-btn{display: none}
+    .menu-btn{visibility: hidden;}
 }
 
 .show{transform: translateX(230px)}
@@ -125,7 +120,7 @@ aside ul li.active a{
 }
 aside ul li.active a i{background-color: steelblue}
 
-aside li a i{
+aside ul li a i{
     display: inline-block;
     width: 30px;
     height: 30px;
@@ -264,17 +259,6 @@ aside li a i{
     }
 }
 
-@media(min-width: 425px){
-    .profile .personal{
-        width: 50%;
-        display: inline-block;
-        border-radius: 5px;
-        padding: 0 10px;
-        margin-left: auto;
-        background-color: rgba(193, 212, 230, .2)
-    }
-}
-
 .profile .about p{
     margin: 20px 0;
     color: #c1d4e6;
@@ -284,6 +268,18 @@ aside li a i{
 
 .profile .personal{
     width: 260px;
+    box-shadow: none;
+}
+
+@media(min-width: 425px){
+    .profile .personal{
+        display: inline-block;
+        border-radius: 5px;
+        padding: 0 10px;
+        margin-left: auto;
+        background-color: rgba(44, 62, 80, .5);
+        box-shadow: 4px 3px 10px 1px rgba(255, 255, 255, 0.3);
+    }
 }
 
 .profile ul{margin: 20px 0 0}
@@ -455,7 +451,6 @@ aside li a i{
 .project6 .front{
     color: #61dafb;
     background-color: #282c34;
-    
 }
 
 .show-back{
@@ -675,7 +670,6 @@ aside li a i{
     .contact .contact-links{
         flex-flow: row;
     }
-    .contact .contact-links > div{width: 50%}
 }
 
 .contact .contact-links > div{
@@ -688,6 +682,10 @@ aside li a i{
 }
 
 .contact .contact-links > div:hover{background-color: steelblue}
+
+@media(min-width: 768px){
+    .contact .contact-links > div{width: 50%}
+}
 
 
 .map{
