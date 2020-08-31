@@ -575,7 +575,7 @@ aside ul li a i{
     opacity: .2;
 }
 
-.skills > div:not(.skills-logo){
+.skills > .skills-group{
     font-size: 1rem;
     font-weight: 700;
     margin-bottom: 40px;
@@ -584,7 +584,7 @@ aside ul li a i{
     border-left: 1px solid steelblue;
 }
 
-.skills-group:nth-of-type(2) .skill:last-of-type{text-transform: capitalize}
+/* .skills-group:nth-of-type(2) .skill:last-of-type{text-transform: capitalize} */
 
 .skills .skills-group p{text-transform: none}
 

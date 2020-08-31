@@ -52,7 +52,7 @@ $(function(){
         // active side-bar item when user is seeing the relevant section while scrolling
         $('.content > div').each(function(){
 
-            if(mywindow.scrollTop() >= ($(this).offset().top - 15)){
+            if(mywindow.scrollTop() >= ($(this).offset().top - 30)){
 
                 var currItem = '#' + $(this).attr('id');
 
