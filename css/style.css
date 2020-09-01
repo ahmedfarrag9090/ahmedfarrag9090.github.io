@@ -469,7 +469,6 @@ aside ul li a i{
 .back img{
     object-fit: cover;
     object-position: -50px -50px;
-    transition: all 3s ease-in-out;
 }
 
 .project4 .back img{
@@ -481,10 +480,6 @@ aside ul li a i{
 }
 
 .project6 .back img{object-position: -300px 0;}
-
-.translate-img{
-    transform: translateY(-250px)
-}
 
 .overlay-details{
     position: absolute;
