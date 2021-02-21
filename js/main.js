@@ -5,15 +5,15 @@ $(function () {
 
 
     // To hide loading when website is ready
-    $(window).on('load', function () {
+    (function () {
         $('body').css('overflow-y', 'auto');
         $('.loading').fadeOut(600);
-    });
+    })();
 
     // To prevent horizontal scroll
-    $(window).on('resize', function () {
-        $('body, html').width($(this).innerWidth());
-    });
+    // $(window).on('resize', function () {
+    //     $('body, html').width($(this).innerWidth());
+    // });
 
 
     // Show & Hide side-bar
@@ -23,10 +23,9 @@ $(function () {
 
     // active side-bar item when user is seeing the relevant section
     $('.content > div').each(function () {
+        var currItem = "#" + $(this).attr("id");
 
         if ($(window).scrollTop() >= ($(this).offset().top - 15)) {
-
-            var currItem = '#' + $(this).attr('id');
 
             $('.side-menu li a[data-target="' + currItem + '"]').parent('li')
                 .addClass('active').siblings('li').removeClass('active');
@@ -50,10 +49,9 @@ $(function () {
 
         // active side-bar item when user is seeing the relevant section while scrolling
         $('.content > div').each(function () {
+            var currItem = "#" + $(this).attr("id");
 
             if ($(window).scrollTop() >= ($(this).offset().top - 30)) {
-
-                var currItem = '#' + $(this).attr('id');
 
                 $('.side-menu li a[data-target="' + currItem + '"]').parent('li')
                     .addClass('active').siblings('li').removeClass('active');

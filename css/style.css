@@ -94,7 +94,9 @@ aside .my-img > div{
 aside img{
     width: 100%;
     height: 100%;
-    object-fit: cover
+    object-fit: cover;
+    filter: saturate(0.5);
+
 }
 
 aside ul li a{
@@ -274,11 +276,11 @@ aside ul li a i{
 @media(min-width: 425px){
     .profile .personal{
         display: inline-block;
-        border-radius: 5px;
+        border-radius: .8rem;
         padding: 0 10px;
         margin-left: auto;
-        background-color: rgba(44, 62, 80, .5);
-        box-shadow: 4px 3px 10px 1px rgba(255, 255, 255, 0.3);
+        background-color: rgba(44, 62, 80, .7);
+        box-shadow: 0px 0px 12px -1px rgba(168, 168, 168, 0.3);
     }
 }
 
@@ -419,38 +421,37 @@ aside ul li a i{
     margin-bottom: 10px
 }
 
-.project1 .front{color: #008080}
+.project1 .front{
+    background:#001c35;
+    color: goldenrod;
+}
+
+.project2 .front{
+    color: #008080;
+    
+}
+
+.project3 .front {
+    background-color: rgb(94, 88, 84);
+    color: #e2a355;
+}
 
 
-.project2 .front{background-color: #1abc9c}
+.project4 .front{background-color: #1abc9c;color: rgba(0,0,0,0.6);}
 
-.project3 .front span{
+.project5 .front span{
     color: #337ab7;
     letter-spacing: normal;
 }
 
-.project4 .front{background-color: rgb(253, 202, 50);}
+.project6 .front{background-color: rgb(253, 202, 50);}
 
-.project4 .front > span{color: #000}
+.project6 .front > span{color: rgb(56, 56, 56)}
 
 
-.project5 .front > span:first-of-type{font-size: 12px;color: #aaa}
-
-.project5 .front > span:not(:first-of-type){
-    color:rgba(0,0,0,.9);
-}
-
-.project5 .front > span > span{
-    font-size: 50px;
-    color: #c90000;
-    border-top: 1px solid #c90000;
-    border-bottom: 1px solid #c90000;
-    border-left: 8px solid #c90000;
-}
-
-.project6 .front{
-    color: #61dafb;
-    background-color: #282c34;
+.project7 .front{
+    color: #7b4b27;
+    background-color: #d3b57d;
 }
 
 .show-back{
@@ -471,15 +472,11 @@ aside ul li a i{
     object-position: -50px -50px;
 }
 
-.project4 .back img{
+.project6 .back img{
     object-position: center -1800px;
 }
 
-.project5 .back img{
-    object-position: -400px -600px;
-}
-
-.project6 .back img{object-position: -300px 0;}
+.project7 .back img{object-position: -300px 0;}
 
 .overlay-details{
     position: absolute;
@@ -534,11 +531,9 @@ aside ul li a i{
 
 
 .resume .wraper{
-    background-color: aliceblue;
-    padding: 20px;
-    overflow-y: auto;
-    color: steelblue;
-    position: relative;
+    background-color: rgba(44, 62, 80, .7);
+    padding: 20px 20px 40px;
+    color: aliceblue;
 }
 
 .resume .wraper > h2{
@@ -559,7 +554,7 @@ aside ul li a i{
     text-transform: uppercase;
     margin: 0;
     margin-bottom: 50px;
-    border-bottom: 1px solid steelblue
+    border-bottom: 1px solid aliceblue
 }
 
 .skills .skills-logo{
@@ -574,14 +569,14 @@ aside ul li a i{
     font-size: 1rem;
     font-weight: 700;
     margin-bottom: 40px;
-    color: steelblue;
+    /* color: steelblue; */
     padding-left: 20px;
-    border-left: 1px solid steelblue;
+    border-left: 1px solid aliceblue;
 }
 
 /* .skills-group:nth-of-type(2) .skill:last-of-type{text-transform: capitalize} */
 
-.skills .skills-group p{text-transform: none}
+.skills .skills-group p{text-transform: unset;}
 
 .education{margin-bottom: 40px}
 
@@ -589,11 +584,11 @@ aside ul li a i{
     text-transform: uppercase;
     margin: 0;
     margin-bottom: 50px;
-    border-bottom: 1px solid steelblue
+    border-bottom: 1px solid aliceblue
 }
 
 .education .edu-item{
-    border-left: 1px solid steelblue;
+    border-left: 1px solid aliceblue;
     padding-left: 20px
 }
 
@@ -607,13 +602,11 @@ aside ul li a i{
     text-transform: uppercase;
     margin: 0;
     margin-bottom: 50px;
-    border-bottom: 1px solid steelblue;
+    border-bottom: 1px solid aliceblue;
 }
 
-.exp-details{margin-bottom: 50px}
-
 .experience .exp-item{
-    border-left: 1px solid steelblue;
+    border-left: 1px solid aliceblue;
     padding-left: 20px;
 }
 
@@ -623,7 +616,7 @@ aside ul li a i{
     display: block;
 }
 
-.resume .wraper .my-cv{
+/* .resume .wraper .my-cv{
     position: absolute;
     left: 0;
     max-width: 80%;
@@ -645,7 +638,7 @@ aside ul li a i{
 
 .resume .wraper .my-cv a:hover{
     background-color: steelblue;
-}
+} */
 
 .contact h2{
     text-transform: uppercase;
