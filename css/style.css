@@ -71,6 +71,8 @@ aside{
     display: flex;
     flex-flow: column;
     width: 200px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
     transition: all .5s ease-in-out
 }
@@ -94,8 +96,10 @@ aside .my-img > div{
 aside img{
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    filter: saturate(0.5);
+    -o-object-fit: cover;
+       object-fit: cover;
+    -webkit-filter: saturate(0.5);
+            filter: saturate(0.5);
 
 }
 
@@ -406,7 +410,10 @@ aside ul li a i{
     align-items: center;
     transition: all .5s ease-in-out;
     z-index: 2;
-    user-select: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
     transform-origin: top left;
     border-radius: 10% 10% 40% 40% / 20% 20% 40% 40%;
     overflow: hidden;
@@ -468,15 +475,18 @@ aside ul li a i{
 }
 
 .back img{
-    object-fit: cover;
-    object-position: -50px -50px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: -50px -50px;
+       object-position: -50px -50px;
 }
 
 .project6 .back img{
-    object-position: center -1800px;
+    -o-object-position: center -1800px;
+       object-position: center -1800px;
 }
 
-.project7 .back img{object-position: -300px 0;}
+.project7 .back img{-o-object-position: -300px 0;object-position: -300px 0;}
 
 .overlay-details{
     position: absolute;
