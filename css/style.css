@@ -452,7 +452,13 @@ aside ul li a i{
 
 .project4 .front{background-color: #1abc9c;color: rgba(0,0,0,0.6);}
 
-.project5 .front span{
+.project5 .front {
+    color: aliceblue;
+    background: #956AE1;
+    ;
+}
+
+/* .project5 .front span{
     color: #337ab7;
     letter-spacing: normal;
 }
@@ -465,7 +471,7 @@ aside ul li a i{
 .project7 .front{
     color: #7b4b27;
     background-color: #d3b57d;
-}
+} */
 
 .show-back{
     transform: rotateZ(90deg);
